@@ -1,6 +1,7 @@
 plugins {
     id("java-library")
     id("xyz.jpenilla.run-paper") version "2.3.1"
+    `maven-publish`
 }
 
 group = "dev.gotiger"
@@ -18,6 +19,14 @@ dependencies {
 
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+        }
+    }
 }
 
 tasks {
