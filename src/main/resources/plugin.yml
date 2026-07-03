@@ -1,9 +1,11 @@
 name: GTDonationCore
+description: $description
+prefix: GT Donation Core
 version: '${version}'
+
 main: dev.gotiger.gTDonationCore.GTDonationCore
 api-version: '1.20'
-prefix: GT Donation Core
 load: STARTUP
+
 authors: [ go-tiger ]
-description: gotiger Donation Core
 website: gotiger.dev
